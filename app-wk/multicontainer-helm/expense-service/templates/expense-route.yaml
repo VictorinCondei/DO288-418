@@ -1,0 +1,18 @@
+{{ with .Values.expenseService }}
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app: expense-service
+    app.kubernetes.io/component: expense-service
+    app.kubernetes.io/instance: expense-service
+  name: expense-service
+spec:
+  host: {{ .host }}.{{ .domain }}
+  port:
+    targetPort: http
+  to:
+    kind: ""
+    name: expense-service
+{{ end }}
