@@ -1,7 +1,7 @@
 {
   "name": "greetings",
   "version": "1.0.0",
-  "description": "Wrong Description
+  "description": "Wrong Description",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
