@@ -4,7 +4,7 @@ FROM default-route-openshift-image-registry.apps.rm1.0a51.p1.openshiftapps.com/o
 COPY pom.xml .
 RUN mvn dependency:go-offline
 
-COPY src .
+COPY src src
 RUN mvn clean package
 
 CMD ["java", "-jar", "target/expense-service-1.0.0-SNAPSHOT-runner.jar"]
