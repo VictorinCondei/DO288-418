@@ -1,4 +1,3 @@
-{{ with .Values.expenseService }}
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -8,7 +7,7 @@ metadata:
     app.kubernetes.io/instance: expense-service
   name: expense-service
 spec:
-  replicas: {{ .replicaCount }}
+  replicas: "TODO"
   selector:
     matchLabels:
       deployment: expense-service
@@ -35,11 +34,10 @@ spec:
               secretKeyRef:
                 key: database-user
                 name: postgresql
-        image: {{ .image|quote }}
+        image: "TODO"
         name: expense-service
         ports:
         - containerPort: 8080
           protocol: TCP
         - containerPort: 8443
           protocol: TCP
-{{ end }}
