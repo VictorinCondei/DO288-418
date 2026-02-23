@@ -1,0 +1,6 @@
+dependencies:
+- name: mariadb
+  repository: http://helm.ocp4.example.com/charts
+  version: 11.3.3
+digest: sha256:5ff1d664e66d8d11852d57b7bc3163ecf1b7531fcb44d9d5860faecb9de8cb3c
+generated: "2026-02-23T05:11:44.107061416-05:00"
